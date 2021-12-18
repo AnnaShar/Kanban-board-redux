@@ -1,0 +1,63 @@
+{
+  "name": "kanban-board-react",
+  "version": "1.0.0",
+  "description": "Kanban board app",
+  "type": "module",
+  "main": "webpack.config.cjs",
+  "dependencies": {
+    "@mdi/js": "^6.4.95",
+    "@mdi/react": "^1.5.0",
+    "body-parser": "^1.19.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "core-js": "^3.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "history": "^5.0.1",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-color": "^2.19.3",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.3.0",
+    "react-select": "^5.2.0",
+    "react-toastify": "^8.1.0",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "use-onclickoutside": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@svgr/webpack": "^5.5.0",
+    "@types/express": "^4.17.13",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.4.0",
+    "html-webpack-plugin": "^5.4.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "scripts": {
+    "start-server": "node --experimental-json-modules src/server/server-requests-api.js",
+    "start-client-dev": "webpack-dev-server",
+    "client-build": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ],
+    "plugins": [
+      [
+        "@babel/transform-runtime"
+      ]
+    ]
+  },
+  "author": "AnnaShar",
+  "license": "ISC"
+}

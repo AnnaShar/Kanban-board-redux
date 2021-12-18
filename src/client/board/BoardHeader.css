@@ -1,0 +1,41 @@
+.board__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 53px;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.board-header__text {
+    max-width: 700px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: url("/src/client/images/edit-cursor.png") 19 16, pointer;
+}
+
+.editable-board-header__input {
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 3px -3px white, 0 2px 0 0 white;
+    padding: 0;
+}
+
+.editable-board-header__input.error-input{
+    box-shadow: 0 0 3px -3px #d2537a, 0 2px 0 0 #d2537a;
+}
+.board__settings-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.settings-icon > svg{
+    fill: white;
+}

@@ -1,0 +1,22 @@
+.board-column__task {
+    position: relative;
+    height: fit-content;
+    border-radius: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    background: white;
+    word-break: break-word;
+    color: #505050;
+}
+
+.board-column__task .task__text{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 3px;
+}
+
+.board-column__task--deleting{
+    background: #d2537a;
+    color: white;
+}

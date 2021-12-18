@@ -1,0 +1,57 @@
+.editable-text__textarea {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid;
+    border-radius: inherit;
+    padding: 5px;
+    margin-bottom: -4px;
+    resize: none;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    border-color: var(--theme-color-base);
+}
+
+.editable-text__input{
+    text-align: inherit ;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    border-color: var(--theme-color-base);
+}
+
+.editable-text__text:hover > .edit-task-button{
+    visibility: visible;
+    transition: 0.3s linear;
+}
+
+.edit-task-button{
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 2px;
+    top: 2px;
+    background: #f7f0e9;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0.6;
+    background: var(--theme-color-light)
+}
+.edit-task-button:hover{
+    background: var(--theme-color-base)
+}
+.edit-task-button > svg {
+    fill: #626161;
+}
+.edit-task-button:hover > svg {
+    fill: #ffffff;
+}
+.error-input{
+    border-color: #ff6a6a;
+}

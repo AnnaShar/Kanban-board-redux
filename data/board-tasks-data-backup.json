@@ -1,0 +1,65 @@
+{
+  "id": "b1",
+  "name": "My board",
+  "metadata": {
+    "lastColumnID": 3,
+    "lastTaskID": 7
+  },
+  "columnsOrder": ["c1", "c2", "c3"],
+  "columns": {
+    "c1": {
+      "id": "c1",
+      "name": "TODO",
+      "tasks": [
+        "t1",
+        "t2",
+        "t3",
+        "t6",
+        "t7"
+      ]
+    },
+    "c2": {
+      "id": "c2",
+      "name": "In progress",
+      "tasks": []
+    },
+    "c3": {
+      "id": "c3",
+      "name": "Done",
+      "tasks": [
+        "t4",
+        "t5"
+      ]
+    }
+  },
+  "tasks": {
+    "t1": {
+      "id": "t1",
+      "name": "Make somebody laugh :)"
+    },
+    "t2": {
+      "id": "t2",
+      "name": "Dance funny dance!"
+    },
+    "t3": {
+      "id": "t3",
+      "name": "Sing imaginary song"
+    },
+    "t4": {
+      "id": "t4",
+      "name": "Work a little bit"
+    },
+    "t5": {
+      "id": "t5",
+      "name": "Make cat's eyes to get some food"
+    },
+    "t6": {
+      "id": "t6",
+      "name": "Learn something new"
+    },
+    "t7": {
+      "name": "Rest",
+      "id": "t7"
+    }
+  }
+}

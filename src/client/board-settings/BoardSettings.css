@@ -1,0 +1,27 @@
+.board__settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 28px;
+    flex-basis: 300px;
+    flex-grow: 2;
+    flex-shrink: 1;
+    background: #efefef;
+    color: #505050;
+}
+
+.board__settings h2 {
+    margin: 0 0 10px 0;
+}
+
+.setting-item {
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.setting-item__header {
+    padding: 0 0 10px 0;
+}

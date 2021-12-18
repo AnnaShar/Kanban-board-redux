@@ -1,0 +1,9 @@
+.add-task-container{
+    padding: 11px;
+}
+.add-task-form__input {
+    line-height: 2.1em;
+}
+.add-task-container--adding {
+    border-top: 2px solid #e0e0e0;
+}

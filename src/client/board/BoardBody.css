@@ -1,0 +1,44 @@
+.board__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.board__columns-area {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 8px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.board__columns {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 4;
+    width: fit-content;
+    height: 100%;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    padding: 5px;
+    background: var(--theme-color-dark);;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color-base);
+}

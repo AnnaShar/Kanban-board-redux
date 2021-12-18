@@ -1,0 +1,27 @@
+.add-column-container {
+    width: 250px;
+    min-width: 250px;
+    height: fit-content;
+    margin: 10px;
+    background: transparent;
+    border: 2px solid #fdfdfd;
+    border-radius: 3px;
+    color: #fdfdfd;
+    box-shadow: 0 1px 5px #fdfdfd;
+}
+
+.add-column-container--adding {
+    padding: 15px 11px;
+    background: #ebecf0;
+    box-shadow: none;
+    border: none;
+}
+
+.add-column-button {
+    height: 45px;
+    font-weight: 600;
+}
+
+.add-column-form__input {
+    line-height: 2.3em;
+}

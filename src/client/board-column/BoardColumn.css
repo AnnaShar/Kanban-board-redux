@@ -1,0 +1,37 @@
+.board-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 300px;
+    min-width: 200px;
+    height: fit-content;
+    max-height: fit-content;
+    margin: 10px;
+    border-radius: 3px;
+    background: #ebecf0;
+    color: #505050;
+}
+.board_column__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.board-column__item{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.board-column--deleting{
+    background: #d2537a;
+    color: white;
+}
