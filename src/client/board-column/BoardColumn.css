@@ -7,8 +7,8 @@
     width: 300px;
     min-width: 200px;
     height: fit-content;
-    max-height: fit-content;
-    margin: 10px;
+    max-height: 100%;
+    margin: 0 10px;
     border-radius: 3px;
     background: #ebecf0;
     color: #505050;
