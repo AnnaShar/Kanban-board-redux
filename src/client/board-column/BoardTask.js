@@ -1,18 +1,18 @@
-import React, {useContext} from 'react';
+import React from 'react';
+import {useDispatch} from 'react-redux';
+import {changeTaskName} from '../redux-store/actions.js';
 import {DraggableContainer} from '../drag-drop-components/DraggableContainer.js';
 import {EditableText} from '../service-components/EditableText.js';
-import {BoardStoreContext} from '../context-store/board-store-context.js';
 import {ItemType} from '../constants/constants.js';
 
 import './BoardTask.css';
 
 
 export const BoardTask = ({task, index}) => {
-
-    const {changeTaskName} = useContext(BoardStoreContext);
+    const dispatch = useDispatch();
 
     const saveTaskName = (name) => {
-        changeTaskName(task.id, name)
+        dispatch(changeTaskName(task.id, name));
     }
 
     return (

@@ -1,5 +1,6 @@
-import React, {useContext} from 'react';
-import {BoardStoreContext} from '../context-store/board-store-context.js';
+import React from 'react';
+import {useDispatch} from 'react-redux';
+import {addTask} from '../redux-store/actions.js';
 import {TextToAdd} from '../service-components/TextToAdd.js';
 import texts from '../constants/texts.js';
 import {ItemType} from '../constants/constants.js';
@@ -7,10 +8,10 @@ import './BoardAddTaskButton.css';
 
 
 export const BoardAddTaskButton = ({columnID}) => {
-    const {addTask} = useContext(BoardStoreContext);
+    const dispatch = useDispatch();
 
     const handleAdding = (taskName) => {
-        addTask({name: taskName}, columnID);
+        dispatch(addTask({name: taskName}, columnID));
     }
 
     return (

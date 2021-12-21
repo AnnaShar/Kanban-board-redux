@@ -1,12 +1,14 @@
 import React, {useContext} from 'react';
+import {useDispatch} from "react-redux";
+import {deleteColumn, deleteTask} from "../redux-store/actions.js";
+import actionNames from '../redux-store/action-names.js';
 import {DragDropContext} from 'react-beautiful-dnd';
 import {TrashCanContext} from '../context-store/trash-can-context.js';
-import {BoardStoreContext} from '../context-store/board-store-context.js';
 import {ItemType, IDs} from '../constants/constants.js';
 
-export const DragDropContextContainer = ({children, moveTask, deleteTask, moveColumn, deleteColumn}) => {
+export const DragDropContextContainer = ({children, moveTask, moveColumn}) => {
+    const dispatch = useDispatch();
     const {showTrashCan, hideTrashCan, setDeletingType} = useContext(TrashCanContext);
-    const {setDeletingStateTask, setDeletingStateColumn} = useContext(BoardStoreContext);
 
     const onDragStart = ({type}) => {
         showTrashCan();
@@ -21,11 +23,11 @@ export const DragDropContextContainer = ({children, moveTask, deleteTask, moveCo
         }
         switch (type) {
             case ItemType.Column:
-                setDeletingStateColumn(draggableId, destination.droppableId === IDs.TrashCanColumn);
+                dispatch({type: actionNames.SET_DELETING_STATE_COLUMN, id: draggableId, isDeleting: destination.droppableId === IDs.TrashCanColumn})
                 break;
 
             case ItemType.Task:
-                setDeletingStateTask(draggableId, destination.droppableId === IDs.TrashCanTask);
+                dispatch({type: actionNames.SET_DELETING_STATE_TASK, id: draggableId, isDeleting: destination.droppableId === IDs.TrashCanTask})
                 break;
         }
     }
@@ -55,7 +57,7 @@ export const DragDropContextContainer = ({children, moveTask, deleteTask, moveCo
 
     const dropTask = (draggableId, source, destination) => {
         if (destination.droppableId === IDs.TrashCanTask) {
-            deleteTask(draggableId, source.droppableId)
+            dispatch(deleteTask(draggableId, source.droppableId));
         } else {
             moveTask(draggableId,
                 {id: source.droppableId, index: source.index},
@@ -65,8 +67,7 @@ export const DragDropContextContainer = ({children, moveTask, deleteTask, moveCo
 
     const dropColumn = (draggableId, source, destination) => {
         if (destination.droppableId === IDs.TrashCanColumn) {
-            //TODO ask before delete
-            deleteColumn(draggableId);
+            dispatch(deleteColumn(draggableId));
         } else {
             moveColumn(draggableId, source.index, destination.index);
         }
@@ -75,10 +76,10 @@ export const DragDropContextContainer = ({children, moveTask, deleteTask, moveCo
     const clearVisualEffects = (draggableId, type) => {
         switch (type) {
             case ItemType.Task:
-                setDeletingStateTask(draggableId, false);
+                dispatch({type: actionNames.SET_DELETING_STATE_TASK, id: draggableId, isDeleting: false})
                 break;
             case ItemType.Column:
-                setDeletingStateColumn(draggableId, false);
+                dispatch({type: actionNames.SET_DELETING_STATE_COLUMN, id: draggableId, isDeleting: false})
                 break;
         }
 

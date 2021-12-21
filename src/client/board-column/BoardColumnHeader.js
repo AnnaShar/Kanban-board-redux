@@ -1,15 +1,16 @@
-import React, {useContext} from 'react';
-import {BoardStoreContext} from '../context-store/board-store-context.js';
+import React from 'react';
+import {useDispatch} from 'react-redux';
+import {changeColumnName} from '../redux-store/actions.js';
 import {EditableText} from '../service-components/EditableText.js';
 
 import './BoardColumnHeader.css';
 
 
 export const BoardColumnHeader = ({id, name}) => {
-    const {changeColumnName} = useContext(BoardStoreContext);
+    const dispatch = useDispatch();
 
     const editName = (text) => {
-        changeColumnName(id, text);
+        dispatch(changeColumnName(id, text));
     }
 
     return (
